@@ -1,12 +1,13 @@
-import { createStore, applyMiddleware, combineReducers } from 'redux';
-import promiseMiddleware from 'redux-promise-middleware';
-import budgetReducer from './budgetReducer';
-import userReducer from './userReducer';
+import { createStore, applyMiddleware, combineReducers } from "redux";
+import promiseMiddleware from "redux-promise-middleware";
+import budgetReducer from "./budgetReducer";
+import userReducer from "./userReducer";
 
-	
 const rootReducer = combineReducers({
   budget: budgetReducer,
-  user: userReducer
-})
+  user: userReducer,
+});
 
 export default createStore(rootReducer, applyMiddleware(promiseMiddleware));
+
+// Chicken sandwiches are amazing
